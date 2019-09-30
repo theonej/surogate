@@ -2,5 +2,6 @@
     <name>steering</name>
     <version>0.1.0</version>
     <description>code used in controlling steering mechanisms</description>
+    <maintainer email="j.henry@n-dexed.com">j henry</maintainer>
     <license>ultralord</license>
 </package>
