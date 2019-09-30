@@ -4,4 +4,5 @@
     <description>code used in controlling steering mechanisms</description>
     <maintainer email="j.henry@n-dexed.com">j henry</maintainer>
     <license>ultralord</license>
+    <build_depend>std_msgs</build_depend>
 </package>
