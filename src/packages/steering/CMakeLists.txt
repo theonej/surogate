@@ -1,3 +1,5 @@
+project()
+
 find_package(catkin REQUIRED COMPONENTS
    roscpp
    rospy
@@ -6,7 +8,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 catkin_package(
-  CATKIN_DEPENDS message_runtime ...
+  CATKIN_DEPENDS message_runtime
 )
 
 add_message_files(
