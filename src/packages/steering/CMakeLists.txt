@@ -7,14 +7,14 @@ find_package(catkin REQUIRED COMPONENTS
    message_generation
 )
 
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-)
-
 add_message_files(
   FILES
   steerCommand.msg
+)
+
+generate_messages(
+  DEPENDENCIES
+  std_msgs
 )
 
 catkin_package(
