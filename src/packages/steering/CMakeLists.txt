@@ -12,11 +12,12 @@ generate_messages(
   std_msgs
 )
 
-catkin_package(
-  CATKIN_DEPENDS message_runtime
-)
-
 add_message_files(
   FILES
   steerCommand.msg
 )
+
+catkin_package(
+  CATKIN_DEPENDS message_runtime
+)
+
