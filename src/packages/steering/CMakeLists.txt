@@ -12,6 +12,11 @@ add_message_files(
   steerCommand.msg
 )
 
+add_service_files(
+  FILES
+  steeringService.srv
+)
+
 generate_messages(
   DEPENDENCIES
   std_msgs
