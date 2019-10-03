@@ -5,7 +5,9 @@ app = Flask(__name__)
 
 @app.route('/steering', methods=["POST"])
 def steer():
-    steering_command = jsonify(request.json)
+    request_data = request.json
+    print(request_data)
+    steering_command = jsonify(request_data)
     print(steering_command)
 
     if(steering_command.direction == 'left'):
