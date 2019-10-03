@@ -9,6 +9,7 @@ increment = 5
 def turn(amount):
     modified = False
 
+    print(steering_servo.angle)
     angle = steering_servo.angle + amount
     if(angle >= 0 and angle <= 180):
         steering_servo.angle = angle
@@ -18,7 +19,9 @@ def turn(amount):
     return modified
 
 def right():
+    print("turning right")
     return turn(increment)
 
 def left():
+    print("turning left")
     return turn(increment * -1)
