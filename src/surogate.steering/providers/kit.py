@@ -5,6 +5,7 @@ kit = ServoKit(channels=16)
 steering_servo = kit.servo[0]
 
 increment = 5
+steering_servo.angle = 0
 
 def turn(amount):
     modified = False
