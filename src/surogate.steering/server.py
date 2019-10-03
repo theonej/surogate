@@ -1,10 +1,11 @@
-from flask import Flask
+from flask import Flask, request
 import providers.kit as steering
 
 app = Flask(__name__)
 
 @app.route('/steering', methods=["POST"])
-def steer(steering_command):
+def steer():
+    steering_command = request.data
     print(steering_command)
 
     if(steering_command.direction == 'left'):
