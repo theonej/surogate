@@ -4,7 +4,7 @@ import time
 kit = ServoKit(channels=16)
 steering_servo = kit.servo[0]
 
-increment = 5
+increment = 10
 steering_servo.angle = 0
 
 def turn(amount):
@@ -12,7 +12,8 @@ def turn(amount):
 
     print(steering_servo.angle)
     angle = steering_servo.angle + amount
-    if(angle >= -1 and angle <= 181):
+    if(angle >= 0 and angle <= 180):
+        print("turning")
         steering_servo.angle = angle
         modified = True
         time.sleep(1)
