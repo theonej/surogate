@@ -12,7 +12,7 @@ def turn(amount):
 
     print(steering_servo.angle)
     angle = steering_servo.angle + amount
-    if(angle >= 0 and angle <= 180):
+    if(angle >= -1 and angle <= 181):
         steering_servo.angle = angle
         modified = True
         time.sleep(1)
