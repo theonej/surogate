@@ -1,0 +1,3 @@
+service steering{
+    rpc steer(int32 direction) returns (int32 angle)
+}
