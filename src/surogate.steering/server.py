@@ -7,7 +7,10 @@ app = Flask(__name__)
 def steer():
     steering_command = request.json
 
+    angle = 0
     if(steering_command['direction'] == 'left'):
-        steering.left()
+        angle = steering.left()
     else:
-        steering.right()
+        angle = steering.right()
+    
+    return jsonify(angle)
