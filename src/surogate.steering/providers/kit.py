@@ -2,15 +2,10 @@ from adafruit_servokit import ServoKit
 import time
 
 kit = ServoKit(channels=16)
-steering_servo = kit.servo[0]
-print(steering_servo)
 
 increment = 10
-steering_servo.angle = 0
 
-print(steering_servo.angle)
-
-def turn(amount):
+def turn(amount, steering_servo):
     modified = False
 
     print(steering_servo.angle)
@@ -23,10 +18,12 @@ def turn(amount):
 
     return modified
 
-def right():
+def right(servo_index):
     print("turning right")
-    return turn(increment)
+    steering_servo = kit.servo[servo_index]
+    return turn(increment, steering_servo)
 
-def left():
+def left(servo_index):
     print("turning left")
-    return turn(increment * -1)
+    steering_servo = kit.servo[servo_index]
+    return turn(increment * -1, steering_servo)
