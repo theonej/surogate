@@ -19,7 +19,7 @@ def steer():
     
     return jsonify(angle)
 
-@app.route('/steering', methods=["POST"])
+@app.route('/angle', methods=["POST"])
 def set_angle():
     angle_command = request.json
 
@@ -29,5 +29,5 @@ def set_angle():
         index = int(angle_command['servo_index'])
     if(angle_command['angle'] != None):
         angle = int(angle_command['angle'])
-        
+
     steering.set_angle(angle, index)
