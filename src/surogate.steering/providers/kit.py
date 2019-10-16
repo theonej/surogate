@@ -7,6 +7,8 @@ steering_servo = kit.servo[0]
 increment = 10
 steering_servo.angle = 0
 
+print(steering_servo.angle)
+
 def turn(amount):
     modified = False
 
