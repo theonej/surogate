@@ -8,9 +8,13 @@ def steer():
     steering_command = request.json
 
     angle = 0
+    index = 0
+    if(steering_command['servo_index'] != None):
+        index = int(steering_command['servo_index'])
+        print("Setting servo index")
     if(steering_command['direction'] == 'left'):
-        angle = steering.left()
+        angle = steering.left(index)
     else:
-        angle = steering.right()
+        angle = steering.right(index)
     
     return jsonify(angle)
