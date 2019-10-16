@@ -31,3 +31,5 @@ def set_angle():
         angle = int(angle_command['angle'])
 
     steering.set_angle(angle, index)
+
+    return jsonify(angle)
