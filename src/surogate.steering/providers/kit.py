@@ -3,6 +3,7 @@ import time
 
 kit = ServoKit(channels=16)
 steering_servo = kit.servo[0]
+print(steering_servo)
 
 increment = 10
 steering_servo.angle = 0
